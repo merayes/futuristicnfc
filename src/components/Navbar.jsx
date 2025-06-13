@@ -13,16 +13,16 @@ const Navbar = ({ className }) => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 100 }}
-      className={`${className} backdrop-blur-lg bg-black/40 border-b border-white/5`}
+      className={`${className} backdrop-blur-lg bg-light-gray/90 border-b border-deep-black/10`}
     >
       <div className="max-w-6xl mx-auto p-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+        <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-transparent">
           NFC Albüm
         </Link>
         
         {/* Hamburger Menu Button */}
         <button 
-          className="lg:hidden text-white p-2"
+          className="lg:hidden text-deep-black p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,8 +42,8 @@ const Navbar = ({ className }) => {
               whileTap={{ scale: 0.95 }}
               className={`px-4 py-2 rounded-full text-sm transition-colors duration-300 ${
                 isActive('/') 
-                  ? 'text-purple-400' 
-                  : 'text-white/80 hover:text-white'
+                  ? 'text-gradient-start' 
+                  : 'text-deep-black/80 hover:text-gradient-start'
               }`}
             >
               Ana Sayfa
@@ -55,8 +55,8 @@ const Navbar = ({ className }) => {
               whileTap={{ scale: 0.95 }}
               className={`px-4 py-2 rounded-full text-sm transition-colors duration-300 ${
                 isActive('/create') 
-                  ? 'text-purple-400' 
-                  : 'text-white/80 hover:text-white'
+                  ? 'text-gradient-start' 
+                  : 'text-deep-black/80 hover:text-gradient-start'
               }`}
             >
               Albüm Oluştur
@@ -65,7 +65,7 @@ const Navbar = ({ className }) => {
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold px-6 py-2 rounded-full hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
+            className="bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end text-white font-bold px-6 py-2 rounded-full hover:shadow-lg hover:shadow-gradient-start/20 transition-all duration-300"
           >
             Giriş Yap
           </motion.button>
@@ -75,7 +75,7 @@ const Navbar = ({ className }) => {
         <motion.div 
           initial={false}
           animate={{ height: isMenuOpen ? 'auto' : 0 }}
-          className="lg:hidden absolute top-full left-0 right-0 bg-black/90 backdrop-blur-lg overflow-hidden"
+          className="lg:hidden absolute top-full left-0 right-0 bg-light-gray/95 backdrop-blur-lg overflow-hidden"
         >
           <div className="flex flex-col p-4 space-y-4">
             <Link to="/" onClick={() => setIsMenuOpen(false)}>
@@ -83,8 +83,8 @@ const Navbar = ({ className }) => {
                 whileTap={{ scale: 0.95 }}
                 className={`w-full px-4 py-2 rounded-full text-sm transition-colors duration-300 ${
                   isActive('/') 
-                    ? 'text-purple-400' 
-                    : 'text-white/80 hover:text-white'
+                    ? 'text-gradient-start' 
+                    : 'text-deep-black/80 hover:text-gradient-start'
                 }`}
               >
                 Ana Sayfa
@@ -95,8 +95,8 @@ const Navbar = ({ className }) => {
                 whileTap={{ scale: 0.95 }}
                 className={`w-full px-4 py-2 rounded-full text-sm transition-colors duration-300 ${
                   isActive('/create') 
-                    ? 'text-purple-400' 
-                    : 'text-white/80 hover:text-white'
+                    ? 'text-gradient-start' 
+                    : 'text-deep-black/80 hover:text-gradient-start'
                 }`}
               >
                 Albüm Oluştur
@@ -104,7 +104,7 @@ const Navbar = ({ className }) => {
             </Link>
             <motion.button 
               whileTap={{ scale: 0.95 }}
-              className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold px-6 py-2 rounded-full hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
+              className="w-full bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end text-white font-bold px-6 py-2 rounded-full hover:shadow-lg hover:shadow-gradient-start/20 transition-all duration-300"
             >
               Giriş Yap
             </motion.button>
